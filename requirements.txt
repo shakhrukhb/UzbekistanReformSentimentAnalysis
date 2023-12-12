@@ -1,0 +1,9 @@
+tensorflow
+pandas
+numpy
+scikit-learn
+datasets
+transformers
+UzTransliterator
+tqdm
+joblib
