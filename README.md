@@ -24,7 +24,7 @@ The preprocess.py script handles text data preprocessing, including handling NA 
 In the classification.py file includes classifying the posts into categories into like Society, Health, Sports, World, Science and Technology, Politics, Crime, Economy, Culture, Show Business and Miscellaneous using `coppercitylabs/uzbek-news-category-classifier` pre-trained model.
 
 ## Neural Network Models
-Neural Network models are included in nn.py file. These models are implemented using Transformers including architectures like CNN, LSTM, GRU, and a baseline feed-forward network. Note that in Train function, you should specify the model architecture. To train the model with a selected Neural Network model, run:
+Neural Network models are included in nn.py file. These models are implemented using Transformers including architectures like CNN, LSTM, GRU, and a baseline feed-forward network. Note that in Train function, you should specify the model architecture. The higherst F1 score achieved for Feed-forward = 0.647, for CNN = 0.651, for LTSM = 0.597, for GRU = 0.634. To train the model with a selected Neural Network model, run:
 ```bash
 python nn.py train
 ```
@@ -34,7 +34,7 @@ python nn.py predict
 ```
 
 ## Machine Learning models
-Machine Learning models are included in ml.py file. These models are implemented using sklearn including architectures like Logistic Regression, Random Forest and KNN. Note that in Train and Predict functions, you should specify the model_type. I used 5-fold CV for Machine Learning models. The average accuracy for LR = 0.594, RF = 0.581 and knn = 0.464. To train the model with a selected Machine Learning model, run:
+Machine Learning models are included in ml.py file. These models are implemented using sklearn including architectures like Logistic Regression, Random Forest and KNN. Note that in Train and Predict functions, you should specify the model_type. I used 5-fold CV for Machine Learning models. The average accuracy achieved for LR = 0.594, RF = 0.581 and knn = 0.464. To train the model with a selected Machine Learning model, run:
 ```bash
 python ml.py train
 ```
