@@ -94,10 +94,10 @@ def train(model_path="model", file_path=("Data/Comments_training.xlsx", 'Comment
     dev_dataset = dev_dataset.to_tf_dataset(columns='input_ids', label_cols='labels', batch_size=12)
     
     # Specify the model:
-    model = feed_forward(tokenizer.vocab_size)
-    # model = ltsm(tokenizer.vocab_size)
-    # model = gru(tokenizer.vocab_size)
-    # model = cnn(tokenizer.vocab_size) # F1 score is 0.6511
+    # model = feed_forward(tokenizer.vocab_size) # F1 score is 0.647
+    # model = ltsm(tokenizer.vocab_size)         # F1 score is 0.597
+    # model = gru(tokenizer.vocab_size)          # F1 score is 0.634
+    model = cnn(tokenizer.vocab_size)          # F1 score is 0.6511
     early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_f1_score', patience=3, mode='max', verbose=1, restore_best_weights=True)
     model_checkpoint = tf.keras.callbacks.ModelCheckpoint(filepath=model_path, monitor='val_f1_score', mode='max', save_best_only=True)
     model.fit(train_dataset, epochs=15, validation_data=dev_dataset, callbacks=[model_checkpoint, early_stopping])
