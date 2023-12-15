@@ -44,9 +44,9 @@ Machine Learning models are included in ml.py file. These models are implemented
 ```bash
 python ml.py train
 ```
-LR = Accuracy: 0.6104923632459863, Precision: 0.6792637944260306, Recall: 0.5702218590720245, F1_score: 0.5947710714345178
-RF = Accuracy: 0.5979480310349876, Precision: 0.643473915593359, Recall: 0.5687423658787203, F1_score: 0.5872455186633763
-KNN = Accuracy: 0.46922998096911145, Precision: 0.6360534273118873, Recall: 0.39697323259738, F1_score: 0.3345738484524795
+LR = Accuracy: 0.6105, Precision: 0.6793, Recall: 0.5702, F1_score: 0.5948
+RF = Accuracy: 0.5979, Precision: 0.64345, Recall: 0.5687, F1_score: 0.5872
+KNN = Accuracy: 0.4692, Precision: 0.6361, Recall: 0.3970, F1_score: 0.3346
 
 To make predictions with a trained Machine Learning model, run:
 ```bash
