@@ -24,20 +24,29 @@ The preprocess.py script handles text data preprocessing, including handling NA 
 In the classification.py file includes classifying the posts into categories into like Society, Health, Sports, World, Science and Technology, Politics, Crime, Economy, Culture, Show Business and Miscellaneous using `coppercitylabs/uzbek-news-category-classifier` pre-trained model.
 
 ## Neural Network Models
-Neural Network models are included in nn.py file. These models are implemented using Transformers including architectures like CNN, LSTM, GRU, and a baseline feed-forward network. Note that in Train function, you should specify the model architecture. The higherst F1 score achieved for Feed-forward = 0.647, for CNN = 0.651, for LTSM = 0.597, for GRU = 0.634. To train the model with a selected Neural Network model, run:
+Neural Network models are included in nn.py file. These models are implemented using Transformers including architectures like CNN, LSTM, GRU, and a baseline feed-forward network. Note that in Train function, you should specify the model architecture. To train the model with a selected Neural Network model, run:
 ```bash
 python nn.py train
 ```
+
+Feed Forward = f1_score: 0.6419, accuracy: 0.7652, precision: 0.6712, recall: 0.5793
+LTSM = f1_score: 0.6188, accuracy: 0.7454, precision: 0.6190, recall: 0.6149
+GRU = f1_score: 0.6346, accuracy: 0.7573, precision: 0.6437, recall: 0.6090
+CNN = f1_score: 0.6682, accuracy: 0.7836, precision: 0.6958, recall: 0.6230
+
 To make predictions with a trained Neural Network model, run:
 ```bash
 python nn.py predict
 ```
 
 ## Machine Learning models
-Machine Learning models are included in ml.py file. These models are implemented using sklearn including architectures like Logistic Regression, Random Forest and KNN. Note that in Train and Predict functions, you should specify the model_type. I used 5-fold CV for Machine Learning models. The average accuracy achieved for LR = 0.594, RF = 0.581 and knn = 0.464. To train the model with a selected Machine Learning model, run:
+Machine Learning models are included in ml.py file. These models are implemented using sklearn including architectures like Logistic Regression, Random Forest and KNN. Note that in Train and Predict functions, you should specify the model_type. I used 5-fold CV for Machine Learning models. To train the model with a selected Machine Learning model, run:
 ```bash
 python ml.py train
 ```
+LR = Accuracy: 0.6104923632459863, Precision: 0.6792637944260306, Recall: 0.5702218590720245, F1_score: 0.5947710714345178
+RF = Accuracy: 0.5979480310349876, Precision: 0.643473915593359, Recall: 0.5687423658787203, F1_score: 0.5872455186633763
+KNN = Accuracy: 0.46922998096911145, Precision: 0.6360534273118873, Recall: 0.39697323259738, F1_score: 0.3345738484524795
 
 To make predictions with a trained Machine Learning model, run:
 ```bash
